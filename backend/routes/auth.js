@@ -302,9 +302,14 @@ router.get('/google/callback',
       { expiresIn: '24h' }
     );
     // Redirect to frontend (production or development)
-    const frontendUrl = process.env.NODE_ENV === 'production' 
-      ? 'https://Codeverse.netlify.app'
-      : 'https://Codeverse.netlify.app';
+    // const frontendUrl = process.env.NODE_ENV === 'production' 
+    //   ? 'https://Codeverse.netlify.app'
+    //   : 'https://Codeverse.netlify.app';
+
+
+    const frontendUrl = process.env.NODE_ENV === 'production'
+  ? 'https://codeverse.netlify.app'
+  : 'http://localhost:5173';
     res.redirect(`${frontendUrl}/oauth?token=${encodeURIComponent(token)}`);
     // Or: res.json({ token, user });
   }
