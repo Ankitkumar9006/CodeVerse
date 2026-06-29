@@ -43,6 +43,14 @@ console.log("- JWT_SECRET exists:", !!process.env.JWT_SECRET)
 const app = express()
 const server = createServer(app)
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "🚀 CodeVerse Backend is Running",
+    version: "1.0.0"
+  });
+});
+
 // ✅ Enhanced Socket.IO configuration with better error handling
 const io = new Server(server, {
   cors: {
