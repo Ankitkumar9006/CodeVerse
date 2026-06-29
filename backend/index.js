@@ -205,8 +205,8 @@ io.on("connection", (socket) => {
 const PORT = process.env.PORT || 5000
 server.listen(PORT, async () => {
   console.log("🎉 Server is running successfully!")
-  console.log(`📍 Server URL: https://codestar-qlq6.onrender.com`)
-  console.log(`🏥 Health check: https://codestar-qlq6.onrender.com/api/health`)
+  console.log(`📍 Server URL: https://codeverse-v76a.onrender.com`)
+  console.log(`🏥 Health check: https://codeverse-v76a.onrender.com/api/health`)
   console.log("📡 Socket.IO enabled for real-time features")
   console.log("🔥 Ready to accept requests!")
   console.log("🔌 Socket.IO transports: websocket, polling")
@@ -220,7 +220,7 @@ server.listen(PORT, async () => {
 
 setInterval(async () => {
   try {
-    const res = await axios.get("https://codestar-qlq6.onrender.com/api/health")
+    const res = await axios.get(`${BASE_URL}/api/health`) 
     console.log(`🔄 Self-ping at ${new Date().toISOString()} | status: ${res.data.status}`)
   } catch (error) {
     console.error("⚠️ Self-ping failed:", error.message)
@@ -307,4 +307,6 @@ async function backfillContestHistory() {
 // If you have any config for Render, comment it out or remove it
 // Example: const BASE_URL = 'https://your-app.onrender.com';
 // Change to:
-const BASE_URL = 'http://localhost:5000';
+
+const BASE_URL =
+  process.env.BASE_URL || "http://localhost:5000";
