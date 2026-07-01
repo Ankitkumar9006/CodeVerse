@@ -218,6 +218,9 @@ server.listen(PORT, async () => {
   console.log("✅ Contest rating system initialized")
 })
 
+const BASE_URL =
+  process.env.BASE_URL || "http://localhost:5000";
+
 setInterval(async () => {
   try {
     const res = await axios.get(`${BASE_URL}/api/health`) 
@@ -308,5 +311,3 @@ async function backfillContestHistory() {
 // Example: const BASE_URL = 'https://your-app.onrender.com';
 // Change to:
 
-const BASE_URL =
-  process.env.BASE_URL || "http://localhost:5000";
