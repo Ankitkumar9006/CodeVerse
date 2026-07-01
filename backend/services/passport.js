@@ -17,10 +17,9 @@ passport.use(new GoogleStrategy({
   //   ? 'https://codestar-qlq6.onrender.com/api/auth/google/callback'
   //   : 'https://codestar-qlq6.onrender.com/api/auth/google/callback',
 
-  callbackURL: process.env.NODE_ENV === 'production'
-  ? 'https://codestar-qlq6.onrender.com/api/auth/google/callback'
+callbackURL: process.env.NODE_ENV === 'production'
+  ? 'https://codeverse-v76a.onrender.com/api/auth/google/callback'
   : 'http://localhost:5000/api/auth/google/callback',
-    
 }, async (accessToken, refreshToken, profile, done) => {
   try {
     let user = await User.findOne({ googleId: profile.id });
