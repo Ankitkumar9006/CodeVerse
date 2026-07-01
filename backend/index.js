@@ -210,7 +210,7 @@ server.listen(PORT, async () => {
   console.log("📡 Socket.IO enabled for real-time features")
   console.log("🔥 Ready to accept requests!")
   console.log("🔌 Socket.IO transports: websocket, polling")
-  console.log("🔌 Socket.IO CORS origins: localhost:5173, codeverse.netlify.app")
+  console.log("🔌 Socket.IO CORS origins: localhost:5173, codeverse-app.netlify.app")
 
   // Initialize contest status and rating updates
   console.log("🏆 Initializing contest rating system...")
