@@ -54,7 +54,7 @@ app.get("/", (req, res) => {
 // ✅ Enhanced Socket.IO configuration with better error handling
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173", "http://localhost:5174", "http://localhost:5175", "https://codeverse.netlify.app"],
+    origin: ["http://localhost:5173", "http://localhost:5174", "http://localhost:5175", "https://codeverse-app.netlify.app"],
     methods: ["GET", "POST"],
     credentials: true,
   },
@@ -71,7 +71,7 @@ console.log("🌐 Express app and Socket.IO server created with enhanced configu
 // Middleware
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174", "http://localhost:5175", "https://codeverse.netlify.app"],
+    origin: ["http://localhost:5173", "http://localhost:5174", "http://localhost:5175", "https://codeverse-app.netlify.app"],
     credentials: true,
   }),
 )
