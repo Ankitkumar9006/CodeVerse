@@ -329,7 +329,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Live Contests Section */}
+      {/* Live Contests Section
       {contests.length > 0 && (
         <section className={`py-20 ${isDark ? 'bg-gray-800/50' : 'bg-gray-50'}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -395,7 +395,7 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
-      )}
+      )} */}
 
       {/* Why Choose Us Section */}
       <section className={`py-20 ${isDark ? 'bg-gray-900' : 'bg-white'}`}>
@@ -496,12 +496,12 @@ const Home: React.FC = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             
-            <Link
+            {/* <Link
               to="/contest"
               className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 inline-flex items-center justify-center"
             >
               Join Live Contest
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

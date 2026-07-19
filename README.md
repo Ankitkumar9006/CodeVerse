@@ -25,14 +25,14 @@ Welcome to **CodeVerse**, a comprehensive platform designed to enhance coding, c
 ---
 
 ## Features
-- **Coding Contests:** Participate in timed contests, solve problems, and view leaderboards.
+- **Coding Contests:** Participate in timed contests, solve problems, and view leaderboards.(upcoming feature)
 - **Problem Playground:** Practice problems with a built-in code editor supporting multiple languages.
 - **Discussion Forums:** Engage in topic-based discussions, share insights, and ask questions.
 - **Real-Time Chat:** Communicate instantly with other users in chat rooms and private messages.
 - **User Profiles:** Track achievements, contest history, and personal progress.
 - **Announcements:** Stay updated with platform news and contest notifications.
 - **Admin Dashboard:** Manage contests, users, and platform content.
-- **Redeem System:** Earn and redeem points for achievements and participation.
+- **Redeem System:** Earn and redeem points for achievements and participation.(upcoming feature)
 
 ---
 
@@ -130,7 +130,7 @@ root/
 ---
 
 ## Usage Guide
-- **Contests:** Navigate to the Contest page to join ongoing or upcoming contests. Problems are displayed with a timer and leaderboard.
+ 
 - **Playground:** Use the Playground for practicing problems and testing code in various languages.
 - **Chat:** Access chat rooms for real-time communication. Private messaging is also supported.
 - **Profile:** View your achievements, contest history, and redeem points for rewards.
@@ -140,15 +140,15 @@ root/
 ---
 
 ## Backend Services
-- **Models:** User, Problem, Contest, ChatRoom, Announcement, Redeem, etc.
-- **Routes:** RESTful APIs for authentication, contest management, chat, problems, and more.
+- **Models:** User, Problem, ChatRoom, Announcement, etc.
+- **Routes:** RESTful APIs for authentication,  chat, problems, and more.
 - **Services:** Judge0 integration for code execution, Passport.js for authentication, and custom business logic.
 - **Socket:** Real-time chat and game features using Socket.io.
 
 ---
 
 ## Frontend Application
-- **Pages:** Home, Contest, Problems, Discussion, Chat, Profile, Admin Dashboard, etc.
+- **Pages:** Home, Problems, Discussion, Chat, Profile, Admin Dashboard, etc.
 - **Components:** Code editor, Navbar, Certificate, Rainbow Cursor, ProtectedRoute, and more.
 - **Contexts:** AuthContext for authentication, ThemeContext for UI themes.
 - **Styling:** Tailwind CSS for rapid UI development and theming.
