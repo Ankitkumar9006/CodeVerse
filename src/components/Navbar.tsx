@@ -36,9 +36,9 @@ const Navbar: React.FC = () => {
   const navItems = [
     { path: '/problems', label: 'Problems' },
     { path: '/top', label: 'Discuss' },
-    // { path: '/contest', label: 'Contest' },
-    // { path: '/game', label: 'Game' },
-    // { path: '/interview', label: 'Interview' },
+    { path: '/contest', label: 'Contest' },
+    { path: '/game', label: 'Game' },
+     { path: '/interview', label: 'Interview' },
     { path: '/chats', label: 'Chat' }
   ];
 
@@ -103,6 +103,13 @@ const Navbar: React.FC = () => {
           {/* Desktop Right Section */}
           <div className="hidden lg:flex items-center space-x-4">
             {/* Streak Fire Icon */}
+              {user && (
+              <div className={`flex items-center px-3 py-1.5 rounded-lg border transition-colors duration-200 ${isDark ? 'bg-orange-900/20 border-orange-800 text-orange-400' : 'bg-orange-50 border-orange-200 text-orange-700 hover:bg-orange-100'}`}
+                   title="Current Streak">
+                <Flame className="h-4 w-4 mr-1 animate-pulse" />
+                <span className="text-sm font-medium">{user.stats?.currentStreak || 0}</span>
+              </div>
+            )}
            
             {/* Theme Toggle */}
             <button
@@ -120,11 +127,20 @@ const Navbar: React.FC = () => {
                 <Moon className="h-5 w-5" />
               )}
             </button>
-
             {user ? (
               <div className="flex items-center space-x-3">
                 {/* Coins */}
-            
+                 <Link
+                  to="/redeem"
+                  className={`flex items-center space-x-2 px-3 py-1.5 rounded-lg border transition-colors duration-200 ${
+                    isDark
+                      ? 'bg-yellow-900/20 border-yellow-800 text-yellow-400 hover:bg-yellow-900/30'
+                      : 'bg-yellow-50 border-yellow-200 text-yellow-700 hover:bg-yellow-100'
+                  }`}
+                >
+                  <Coins className="h-4 w-4" />
+                  <span className="text-sm font-medium">{user.coins || 0}</span>
+                </Link>
 
                 {/* Profile Dropdown */}
                 <div className="relative">

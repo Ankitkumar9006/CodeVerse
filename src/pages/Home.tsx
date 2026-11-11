@@ -210,33 +210,33 @@ const Home: React.FC = () => {
       ? "from-transparent via-transparent to-transparent"
       : "from-blue-500/20 via-indigo-500/20 to-purple-500/20",
     },
-  //   {
-  //     title: "Compete Globally",
-  //     description: "Join weekly contests and compete with programmers worldwide",
-  //     image: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800",
-  //     features: ["Weekly Contests", "Global Rankings", "ELO Rating System"],
-  //     gradient: isDark
-  // ? "from-transparent via-transparent to-transparent"
-  // : "from-blue-500/20 via-indigo-500/20 to-purple-500/20",
-  //   },
-  //   {
-  //     title: "Play Games Like chess.com",
-  //     description: "Challenge others in live coding battles with anti-cheat protection",
-  //     image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800",
-  //     features: ["Live Battles", "Anti-cheat", "Rating System"],
-  //     gradient: isDark
-  // ? "from-transparent via-transparent to-transparent"
-  // : "from-blue-500/20 via-indigo-500/20 to-purple-500/20",
-  //   },
-  //   {
-  //     title: "AI Interview Practice",
-  //     description: "Practice technical interviews with AI-powered questions and feedback",
-  //     image: "https://incruiter.com/blog/wp-content/uploads/2025/03/Website-blog-feature-image-33.jpg",
-  //     features: ["AI Questions", "Voice Interaction", "Real-time Feedback"],
-  //     gradient: isDark
-  // ? "from-transparent via-transparent to-transparent"
-  // : "from-blue-500/20 via-indigo-500/20 to-purple-500/20",
-  //   },
+    {
+      title: "Compete Globally",
+      description: "Join weekly contests and compete with programmers worldwide",
+      image: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800",
+      features: ["Weekly Contests", "Global Rankings", "ELO Rating System"],
+      gradient: isDark
+  ? "from-transparent via-transparent to-transparent"
+  : "from-blue-500/20 via-indigo-500/20 to-purple-500/20",
+    },
+    {
+      title: "Play Games Like chess.com",
+      description: "Challenge others in live coding battles with anti-cheat protection",
+      image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800",
+      features: ["Live Battles", "Anti-cheat", "Rating System"],
+      gradient: isDark
+  ? "from-transparent via-transparent to-transparent"
+  : "from-blue-500/20 via-indigo-500/20 to-purple-500/20",
+    },
+    {
+      title: "AI Interview Practice",
+      description: "Practice technical interviews with AI-powered questions and feedback",
+      image: "https://incruiter.com/blog/wp-content/uploads/2025/03/Website-blog-feature-image-33.jpg",
+      features: ["AI Questions", "Voice Interaction", "Real-time Feedback"],
+      gradient: isDark
+  ? "from-transparent via-transparent to-transparent"
+  : "from-blue-500/20 via-indigo-500/20 to-purple-500/20",
+    },
   ]
 
   useEffect(() => {
@@ -1520,6 +1520,16 @@ const Home: React.FC = () => {
                     <div className={`absolute inset-0 rounded-2xl ${isDark ? 'bg-gradient-to-r from-blue-400/50 to-purple-400/50' : 'bg-gradient-to-r from-blue-300/30 to-purple-300/30'} opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500`}></div>
                   </Link>
                   {/* here contect add  */}
+                   <Link
+                    to="/contest"
+                    className={`group ${isDark ? 'border-2 border-white/50 text-white hover:bg-white hover:text-gray-900' : 'border-2 border-gray-900/50 text-gray-900 hover:bg-gray-900 hover:text-white'} px-8 py-4 rounded-2xl font-bold transition-all duration-300 inline-flex items-center justify-center backdrop-blur-sm hover:scale-105 magnetic-hover`}
+                  >
+                    <Trophy className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
+                    Join Contest
+                    
+                    {/* Border glow effect */}
+                    <div className={`absolute inset-0 rounded-2xl ${isDark ? 'border-2 border-white/70' : 'border-2 border-gray-900/70'} opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-300`}></div>
+                  </Link>
                   
                 </div>
               )}
@@ -1687,11 +1697,545 @@ const Home: React.FC = () => {
         </div>
 
         {/* Enhanced Feature Cards - Coins & Certificates with Premium Animations */}
+
+         {user && (
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className={`text-3xl font-bold mb-4 ${isDark ? "text-white" : "text-gray-900"}`}>
+                <span className={`${
+                  isDark 
+                    ? "bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent animate-pulse" 
+                    : "bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-pulse"
+                }`}>
+                  Unlock Your Potential
+                </span>
+              </h2>
+              <div className="flex items-center justify-center space-x-2">
+                <div className={`w-12 h-[2px] bg-gradient-to-r from-transparent ${
+                  isDark ? "via-yellow-400" : "via-blue-500"
+                } to-transparent animate-pulse`}></div>
+                <div className={`w-2 h-2 ${
+                  isDark ? "bg-yellow-400" : "bg-blue-500"
+                } rounded-full animate-bounce`}></div>
+                <div className={`w-12 h-[2px] bg-gradient-to-r from-transparent ${
+                  isDark ? "via-orange-400" : "via-purple-500"
+                } to-transparent animate-pulse`}></div>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Coins & Redeem Feature with Advanced Animations */}
+              <div className={`group relative overflow-hidden rounded-3xl transition-all duration-700 hover:scale-[1.03] transform-gpu ${
+                isDark 
+                  ? "bg-gradient-to-br from-gray-800 via-gray-700 to-gray-800 border-2 border-white/30 hover:border-white/50" 
+                  : "bg-gradient-to-br from-white via-yellow-50 to-orange-50 border-2 border-black/30 hover:border-black/50"
+              } shadow-2xl hover:shadow-3xl hover:shadow-yellow-500/20`}>
+                
+                {/* Floating Animation Elements */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                  <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-yellow-400/30 to-orange-500/30 rounded-full blur-xl animate-bounce delay-100"></div>
+                  <div className="absolute top-1/2 -left-8 w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-full blur-lg animate-pulse delay-300"></div>
+                  <div className="absolute bottom-4 right-1/3 w-8 h-8 bg-gradient-to-br from-yellow-300/40 to-orange-400/40 rounded-full blur-md animate-ping delay-500"></div>
+                </div>
+
+                {/* Animated Background Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 via-orange-500/5 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-pulse"></div>
+                
+                {/* Animated Border Glow */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-yellow-400/50 via-orange-500/50 to-red-500/50 opacity-0 group-hover:opacity-20 blur-xl transition-all duration-700"></div>
+                
+                <div className="relative p-8 z-10">
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="relative">
+                        {/* Coin Icon with Advanced Animation */}
+                        <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 transform-gpu">
+                          <span className="text-2xl animate-bounce">🪙</span>
+                        </div>
+                        {/* Floating Notification Badge */}
+                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center animate-pulse">
+                          <span className="text-xs text-white font-bold animate-bounce delay-200">!</span>
+                        </div>
+                        {/* Ripple Effect */}
+                        <div className="absolute inset-0 rounded-2xl bg-yellow-400/30 animate-ping opacity-0 group-hover:opacity-100"></div>
+                      </div>
+                      <div className="transform transition-all duration-500 group-hover:translate-x-2">
+                        <h3 className={`text-2xl font-bold mb-1 ${isDark ? "text-white" : "text-gray-900"} group-hover:text-yellow-600 transition-colors duration-300`}>
+                          You have{" "}
+                          <span className="relative inline-block">
+                            <span className="text-yellow-500 font-extrabold text-3xl animate-pulse">
+                              {userCoins.coins}
+                            </span>
+                            {/* Glowing effect on coins number */}
+                            <div className="absolute inset-0 text-yellow-500 font-extrabold text-3xl animate-ping opacity-0 group-hover:opacity-30"></div>
+                          </span>{" "}
+                          coins
+                        </h3>
+                        <p className={`text-sm ${isDark ? "text-gray-400" : "text-gray-600"} transition-all duration-300 group-hover:text-yellow-600`}>
+                          Total earned: {userCoins.totalEarned} coins
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className={`text-lg mb-6 ${isDark ? "text-gray-300" : "text-gray-700"} ${isDark ? "group-hover:text-gray-200" : "group-hover:text-gray-600"} transition-colors duration-300`}>
+                    Redeem your hard-earned coins for amazing rewards! Get exclusive merchandise, gift cards, and premium features.
+                  </p>
+
+                  {/* Animated Reward Grid */}
+                  <div className="grid grid-cols-3 gap-4 mb-6">
+                    {[
+                      { name: "T-Shirts", cost: "500", color: "blue", delay: "0" },
+                      { name: "Gift Cards", cost: "2000", color: "green", delay: "100" },
+                      { name: "Headphones", cost: "1200", color: "purple", delay: "200" }
+                    ].map((item, index) => (
+                      <div 
+                        key={index}
+                        className={`text-center p-3 rounded-lg transition-all duration-500 hover:scale-110 hover:rotate-2 transform-gpu ${
+                          isDark ? "bg-gray-700/50 hover:bg-gray-700 border border-white/20 hover:border-white/40" : "bg-white/70 hover:bg-white border border-black/20 hover:border-black/40"
+                        } hover:shadow-xl`}
+                        style={{ animationDelay: `${item.delay}ms` }}
+                      >
+                        <div className={`text-lg font-bold animate-pulse ${
+                          isDark 
+                            ? `text-${item.color}-400` 
+                            : `text-${item.color}-600`
+                        }`}>
+                          {item.name}
+                        </div>
+                        <div className={`text-xs ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+                          {item.cost} coins
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Premium Animated Button */}
+                  <Link
+                    to="/redeem"
+                    className="w-full relative overflow-hidden bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-500 flex items-center justify-center group/button shadow-2xl hover:shadow-3xl transform hover:scale-105"
+                  >
+                    {/* Button ripple effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent translate-x-[-100%] group-hover/button:translate-x-[100%] transition-transform duration-700 skew-x-12"></div>
+                    
+                    <span className="mr-2 animate-bounce">🎁</span>
+                    <span className="relative z-10">Redeem Now</span>
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover/button:translate-x-2 transition-transform duration-300" />
+                    
+                    {/* Button glow effect */}
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-yellow-400 to-orange-400 opacity-0 group-hover/button:opacity-30 blur-xl transition-opacity duration-500"></div>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Company Certificates Feature with Premium Animations */}
+              <div className={`group relative overflow-hidden rounded-3xl transition-all duration-700 hover:scale-[1.03] transform-gpu ${
+                isDark 
+                  ? "bg-gradient-to-br from-gray-800 via-blue-900/20 to-purple-900/20 border-2 border-white/30 hover:border-white/50" 
+                  : "bg-gradient-to-br from-white via-blue-50 to-purple-50 border-2 border-black/30 hover:border-black/50"
+              } shadow-2xl hover:shadow-3xl hover:shadow-blue-500/20`}>
+                
+                {/* Floating Animation Elements */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                  <div className="absolute top-4 right-8 w-12 h-12 bg-gradient-to-br from-blue-400/30 to-purple-500/30 rounded-full blur-lg animate-float"></div>
+                  <div className="absolute bottom-8 left-4 w-8 h-8 bg-gradient-to-br from-purple-400/20 to-indigo-500/20 rounded-full blur-md animate-bounce delay-700"></div>
+                  <div className="absolute top-1/2 right-4 w-6 h-6 bg-gradient-to-br from-blue-300/40 to-cyan-400/40 rounded-full blur-sm animate-ping delay-1000"></div>
+                </div>
+
+                {/* Animated Background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                
+                {/* Trophy Animation Styles */}
+                <style>{`
+                  @keyframes float {
+                    0%, 100% { transform: translateY(0px) rotate(0deg); }
+                    25% { transform: translateY(-10px) rotate(2deg); }
+                    50% { transform: translateY(-5px) rotate(-1deg); }
+                    75% { transform: translateY(-15px) rotate(1deg); }
+                  }
+                  .animate-float {
+                    animation: float 4s ease-in-out infinite;
+                  }
+                  @keyframes trophy-glow {
+                    0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+                    50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6), 0 0 60px rgba(147, 51, 234, 0.3); }
+                  }
+                  .trophy-glow {
+                    animation: trophy-glow 2s ease-in-out infinite;
+                  }
+                `}</style>
+                
+                <div className="relative p-8 z-10">
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="relative">
+                        {/* Trophy Icon with Advanced Animation */}
+                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-500 transform-gpu trophy-glow">
+                          <Trophy className="h-8 w-8 text-white animate-pulse" />
+                        </div>
+                        {/* Star Badge with Rotation */}
+                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center animate-spin">
+                          <Star className="h-3 w-3 text-white" />
+                        </div>
+                        {/* Orbital Rings */}
+                        <div className="absolute inset-0 rounded-2xl border-2 border-blue-400/30 animate-ping opacity-0 group-hover:opacity-100"></div>
+                        <div className="absolute inset-[-4px] rounded-2xl border border-purple-400/20 animate-pulse opacity-0 group-hover:opacity-100"></div>
+                      </div>
+                      <div className="transform transition-all duration-500 group-hover:translate-x-2">
+                        <h3 className={`text-2xl font-bold mb-1 ${isDark ? "text-white" : "text-gray-900"} group-hover:text-blue-600 transition-colors duration-300`}>
+                          Earn{" "}
+                          <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse font-extrabold">
+                            Certificates
+                          </span>
+                        </h3>
+                        <p className={`text-sm ${isDark ? "text-gray-400" : "text-gray-600"} transition-all duration-300 group-hover:text-blue-600`}>
+                          Complete company-specific problems
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className={`text-lg mb-6 ${isDark ? "text-gray-300" : "text-gray-700"} ${isDark ? "group-hover:text-gray-200" : "group-hover:text-gray-600"} transition-colors duration-300`}>
+                    Solve 100% of problems from top tech companies and earn professional certificates to boost your portfolio!
+                  </p>
+
+                  {/* Animated Company Grid */}
+                  <div className="grid grid-cols-2 gap-3 mb-6">
+                    {topCompanies.slice(0, 4).map((company, index) => (
+                      <Link
+                        key={company.name}
+                        to={`/company/${company.name}`}
+                        className={`group/company p-3 rounded-lg transition-all duration-500 hover:scale-105 transform-gpu ${
+                          isDark ? "bg-gray-700/50 hover:bg-gray-700 border border-white/20 hover:border-white/40" : "bg-white/70 hover:bg-white border-2 border-black/20 hover:border-black/40"
+                        } hover:shadow-xl hover:border-blue-300`}
+                        style={{ animationDelay: `${index * 100}ms` }}
+                      >
+                        <div className="flex items-center space-x-3">
+                          <div className={`w-10 h-10 bg-gradient-to-br ${company.color} rounded-lg flex items-center justify-center text-white font-bold text-lg group-hover/company:rotate-12 group-hover/company:scale-110 transition-all duration-500 shadow-lg`}>
+                            <span className="animate-pulse">{company.icon}</span>
+                          </div>
+                          <div className="transform transition-all duration-300 group-hover/company:translate-x-1">
+                            <div className={`font-semibold ${isDark ? "text-white" : "text-gray-900"} ${isDark ? "group-hover/company:text-blue-400" : "group-hover/company:text-blue-600"} transition-colors duration-300`}>
+                              {company.name}
+                            </div>
+                            <div className={`text-xs ${isDark ? "text-gray-400" : "text-gray-600"} ${isDark ? "group-hover/company:text-blue-300" : "group-hover/company:text-blue-500"} transition-colors duration-300`}>
+                              {company.count} problems
+                            </div>
+                          </div>
+                        </div>
+                        {/* Hover glow effect */}
+                        <div className="absolute inset-0 rounded-lg bg-blue-400/10 opacity-0 group-hover/company:opacity-100 transition-opacity duration-300"></div>
+                      </Link>
+                    ))}
+                  </div>
+
+                  {/* Premium Animated Button */}
+                  <Link
+                    to="/problems?company=all"
+                    className="w-full relative overflow-hidden bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-500 flex items-center justify-center group/button shadow-2xl hover:shadow-3xl transform hover:scale-105"
+                  >
+                    {/* Button wave effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover/button:translate-x-[100%] transition-transform duration-1000 skew-x-12"></div>
+                    
+                    <Building2 className="mr-2 h-5 w-5 animate-bounce" />
+                    <span className="relative z-10">Explore All Companies</span>
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover/button:translate-x-2 transition-transform duration-300" />
+                    
+                    {/* Button particles effect */}
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover/button:opacity-20 blur-xl transition-opacity duration-500"></div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
     
         {/* Enhanced Announcements & Contests Grid */}
+
+         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+          {/* Announcements */}
+          <section>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className={`text-2xl font-semibold ${isDark ? "text-white" : "text-gray-900"}`}>
+                Latest Announcements
+              </h2>
+              <Link
+                to="/announcements"
+                className="inline-flex items-center text-orange-600 hover:text-orange-700 font-medium text-sm hover:underline"
+              >
+                View all
+                <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </div>
+            <div className="space-y-4">
+              {loading ? (
+                <div className="text-center py-8 text-gray-500 dark:text-gray-400">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500 mx-auto mb-4"></div>
+                  <p>Loading announcements...</p>
+                </div>
+              ) : announcements.length > 0 ? (
+                announcements.slice(0, 3).map((announcement) => (
+                  <Link
+                    key={announcement._id}
+                    to={`/announcements/${announcement._id}`}
+                    className={`group relative overflow-hidden p-4 rounded-xl transition-all duration-300 hover:scale-[1.02] block ${
+                      isDark
+                        ? "bg-gradient-to-r from-orange-900/20 to-red-900/20 border-2 border-white/20 hover:bg-orange-900/30 hover:border-white/40"
+                        : "bg-gradient-to-r from-orange-50 to-red-50 border-2 border-black/20 hover:bg-orange-100 hover:border-black/40"
+                    } border-l-4 border-l-orange-500 hover:shadow-lg`}
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center mb-2">
+                          <span
+                            className={`px-2 py-1 rounded-full text-xs font-medium mr-3 ${
+                              announcement.priority === "high"
+                                ? "bg-red-500/20 text-red-400 border border-red-500/30"
+                                : announcement.priority === "medium"
+                                  ? "bg-yellow-500/20 text-yellow-400 border border-yellow-500/30"
+                                  : "bg-green-500/20 text-green-400 border border-green-500/30"
+                            }`}
+                          >
+                            {announcement.type}
+                          </span>
+                          <span className={`text-xs ${isDark ? "text-gray-400" : "text-gray-500"}`}>
+                            {new Date(announcement.createdAt).toLocaleDateString()}
+                          </span>
+                        </div>
+
+                        <h4
+                          className={`font-bold mb-2 group-hover:text-orange-600 transition-colors line-clamp-1 ${
+                            isDark ? "text-white" : "text-gray-900"
+                          }`}
+                        >
+                          {announcement.title}
+                        </h4>
+
+                        <p
+                          className={`text-sm mb-2 leading-relaxed line-clamp-2 ${isDark ? "text-gray-300" : "text-gray-700"}`}
+                        >
+                          {announcement.content}
+                        </p>
+
+                        <div className="flex items-center justify-between">
+                          <span className={`text-xs ${isDark ? "text-gray-400" : "text-gray-500"}`}>
+                            By {announcement.createdBy?.username || "Admin"}
+                          </span>
+                          <span className="text-orange-600 text-sm font-medium group-hover:underline">Read more →</span>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))
+              ) : (
+                <div className="text-center py-8">
+                  <div
+                    className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${
+                      isDark ? "bg-gray-700" : "bg-white border border-gray-200"
+                    }`}
+                  >
+                    <BookOpen className={`h-8 w-8 ${isDark ? "text-gray-400" : "text-gray-400"}`} />
+                  </div>
+                  <p className={`${isDark ? "text-gray-400" : "text-gray-500"}`}>No announcements yet</p>
+                </div>
+              )}
+
+              {announcements.length > 3 && (
+                <div className="text-center pt-4">
+                  <Link
+                    to="/announcements"
+                    className="inline-flex items-center text-orange-600 hover:text-orange-700 font-medium text-sm hover:underline"
+                  >
+                    View all announcements
+                    <ArrowRight className="ml-1 h-4 w-4" />
+                  </Link>
+                </div>
+              )}
+            </div>
+          </section>
+
+          {/* Upcoming Contests */}
+          <div
+            className={`relative overflow-hidden rounded-3xl p-8 transition-all duration-300 ${
+              isDark ? "bg-gray-800/50 border-2 border-white/30 hover:border-white/50" : "bg-white border-2 border-black/30 hover:border-black/50"
+            } backdrop-blur-sm hover:shadow-2xl`}
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
+            <div className="relative">
+              <div className="flex items-center justify-between mb-8">
+                <div>
+                  <h3 className={`text-2xl font-bold mb-2 ${isDark ? "text-white" : "text-gray-900"}`}>
+                    Upcoming Contests
+                  </h3>
+                  <p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>Compete with developers worldwide</p>
+                </div>
+                <Link to="/contest" className="text-blue-600 hover:text-blue-700 text-sm font-medium hover:underline">
+                  View all
+                </Link>
+              </div>
+
+              <div className="space-y-6">
+                {loading ? (
+                  <div className="text-center py-8 text-gray-500 dark:text-gray-400">
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500 mx-auto mb-4"></div>
+                    <p>Loading contests...</p>
+                  </div>
+                ) : contests.length > 0 ? (
+                  contests.map((contest) => (
+                    <Link
+                      key={contest._id}
+                      to="/contest"
+                      className={`group relative overflow-hidden p-6 rounded-2xl transition-all duration-300 hover:scale-105 ${
+                        isDark
+                          ? "bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-2 border-white/20 hover:border-white/40"
+                          : "bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-black/20 hover:bg-blue-100 hover:border-black/40"
+                      } hover:shadow-lg block`}
+                    >
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="flex-1">
+                          <h4
+                            className={`font-bold mb-2 group-hover:text-blue-600 transition-colors ${
+                              isDark ? "text-white" : "text-gray-900"
+                            }`}
+                          >
+                            {contest.name}
+                          </h4>
+                          <p className={`text-sm mb-4 leading-relaxed ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+                            {contest.description}
+                          </p>
+                        </div>
+                        <div className="text-right ml-4">
+                          <div className="text-lg font-bold text-blue-600 mb-1">
+                            {getTimeUntilContest(contest.startTime)}
+                          </div>
+                          <div className={`text-xs ${isDark ? "text-gray-400" : "text-gray-500"}`}>remaining</div>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <div className={`flex items-center ${isDark ? "text-gray-400" : "text-gray-500"}`}>
+                          <Calendar className="h-4 w-4 mr-2" />
+                          <span>{new Date(contest.startTime).toLocaleDateString()}</span>
+                        </div>
+                        <div className={`flex items-center ${isDark ? "text-gray-400" : "text-gray-500"}`}>
+                          <Users className="h-4 w-4 mr-2" />
+                          <span>{contest.participants.length} registered</span>
+                        </div>
+                      </div>
+                    </Link>
+                  ))
+                ) : (
+                  <div className="text-center py-12">
+                    <div
+                      className={`w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 ${
+                        isDark ? "bg-gray-700" : "bg-white border border-gray-200"
+                      }`}
+                    >
+                      <Trophy className={`h-10 w-10 ${isDark ? "text-gray-400" : "text-gray-400"}`} />
+                    </div>
+                    <p className={`${isDark ? "text-gray-400" : "text-gray-500"}`}>No upcoming contests</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
       
 
           <MarqueeLogos />
+
+
+
+           {/* Enhanced Features Section */}
+        <div
+          className={`relative overflow-hidden rounded-3xl p-12 mb-20 ${
+            isDark ? "bg-gray-800/50 border-2 border-white/30" : "bg-white border-2 border-black/30"
+          } backdrop-blur-sm`}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5"></div>
+          <div className="relative">
+            <div className="text-center mb-16">
+              <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${isDark ? "text-white" : "text-gray-900"}`}>
+                Everything You Need to
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  {" "}
+                  Excel
+                </span>
+              </h2>
+              <p className={`text-xl max-w-3xl mx-auto ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+                Our comprehensive platform provides all the tools and resources you need to become an exceptional
+                programmer
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  icon: <Code className="h-8 w-8" />,
+                  title: "Practice Problems",
+                  description: "2000+ coding problems from easy to expert level with detailed solutions",
+                  link: "/problems",
+                  color: "from-orange-500 to-red-500",
+                  bgColor: "from-orange-500/10 to-red-500/10",
+                },
+                {
+                  icon: <Trophy className="h-8 w-8" />,
+                  title: "Global Contests",
+                  description: "Weekly contests to compete with programmers worldwide and climb rankings",
+                  link: "/contest",
+                  color: "from-yellow-500 to-orange-500",
+                  bgColor: "from-yellow-500/10 to-orange-500/10",
+                },
+                {
+                  icon: <Play className="h-8 w-8" />,
+                  title: "Real-time Battles",
+                  description: "Challenge others in live coding battles with anti-cheat protection",
+                  link: "/game",
+                  color: "from-green-500 to-teal-500",
+                  bgColor: "from-green-500/10 to-teal-500/10",
+                },
+                {
+                  icon: <Users className="h-8 w-8" />,
+                  title: "Community",
+                  description: "Connect with developers, share solutions, and learn together",
+                  link: "/top",
+                  color: "from-blue-500 to-purple-500",
+                  bgColor: "from-blue-500/10 to-purple-500/10",
+                },
+              ].map((feature, index) => (
+                <Link
+                  key={index}
+                  to={feature.link}
+                  className={`group relative overflow-hidden p-8 rounded-3xl transition-all duration-500 hover:scale-105 hover:shadow-2xl ${
+                    isDark
+                      ? "bg-gray-800/50 border-2 border-white/30 hover:bg-gray-800/80 hover:border-white/50"
+                      : "bg-white border-2 border-black/30 hover:bg-gray-50 hover:border-black/50"
+                  } backdrop-blur-sm`}
+                >
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${feature.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                  ></div>
+                  <div className="relative text-center">
+                    <div
+                      className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} text-white mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}
+                    >
+                      {feature.icon}
+                    </div>
+                    <h3
+                      className={`text-xl font-bold mb-4 transition-all duration-300 ${
+                        isDark ? "text-white" : "text-gray-900"
+                      }`}
+                    >
+                      {feature.title}
+                    </h3>
+                    <p className={`leading-relaxed ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+                      {feature.description}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
           
         {/* Learn and Upskill Section */}
         <div
@@ -2124,8 +2668,8 @@ const Home: React.FC = () => {
                 </span>
               </div>
               <p className="text-gray-300 mb-8 max-w-md text-lg leading-relaxed">
-                Master coding skills with our comprehensive platform featuring problems
-                . Join thousands of developers improving their skills every day.
+                  Master coding skills with our comprehensive platform featuring problems, contests, and real-time
+                battles. Join thousands of developers improving their skills every day.
               </p>
               <div className="flex space-x-4">
                 {[
@@ -2162,10 +2706,10 @@ const Home: React.FC = () => {
               <ul className="space-y-4">
                 {[
                   { name: "Problems", href: "/problems" },
-                  // { name: "Contests", href: "/contest" },
-                  // { name: "Game Mode", href: "/game" },
+                  { name: "Contests", href: "/contest" },
+                  { name: "Game Mode", href: "/game" },
                   { name: "Discussions", href: "/top" },
-                  //{ name: "Interview Practice", href: "/interview" },
+                  { name: "Interview Practice", href: "/interview" },
                 ].map((link, index) => (
                   <li key={index}>
                     <Link

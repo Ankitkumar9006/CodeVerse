@@ -113,41 +113,41 @@ console.log("✅ Problem routes mounted at /api/problems")
 app.use("/api/discussion", discussionRoutes)
 console.log("✅ Discussion routes mounted at /api/discussion")
 
-// app.use("/api/contests", contestRoutes)
-// console.log("✅ Contest routes mounted at /api/contests")
+app.use("/api/contests", contestRoutes)
+console.log("✅ Contest routes mounted at /api/contests")
 
-// app.use("/api/game", gameRoutes)
-// console.log("✅ Game routes mounted at /api/game")
+app.use("/api/game", gameRoutes)
+console.log("✅ Game routes mounted at /api/game")
 
-// app.use("/api/rapidfire", rapidfireRoutes)
-// console.log("✅ Rapid Fire routes mounted at /api/rapidfire")
+app.use("/api/rapidfire", rapidfireRoutes)
+console.log("✅ Rapid Fire routes mounted at /api/rapidfire")
 
-// app.use("/api/mcq", mcqRoutes)
-// console.log("✅ MCQ routes mounted at /api/mcq")
+app.use("/api/mcq", mcqRoutes)
+console.log("✅ MCQ routes mounted at /api/mcq")
 
 app.use("/api/profile", profileRoutes)
 console.log("✅ Profile routes mounted at /api/profile")
 
-// app.use("/api/potd", potdRoutes)
-// console.log("✅ POTD routes mounted at /api/potd")
+app.use("/api/potd", potdRoutes)
+console.log("✅ POTD routes mounted at /api/potd")
 
-// app.use("/api/redeem", redeemRoutes)
-// console.log("✅ Redeem routes mounted at /api/redeem")
+app.use("/api/redeem", redeemRoutes)
+console.log("✅ Redeem routes mounted at /api/redeem")
 
 app.use("/api/chats", chatsRoutes)
 console.log("✅ Chats routes mounted at /api/chats")
 
-// app.use("/api/interview", interviewRoutes)
-// console.log("✅ Interview routes mounted at /api/interview")
+app.use("/api/interview", interviewRoutes)
+console.log("✅ Interview routes mounted at /api/interview")
 
-// app.use("/api/announcements", announcementsRouter)
-// console.log("✅ Announcements routes mounted at /api/announcements")
+app.use("/api/announcements", announcementsRouter)
+console.log("✅ Announcements routes mounted at /api/announcements")
 
 app.use('/api/users', usersRouter);
 console.log("✅ User routes mounted at /api/users")
 
-// app.use("/api/certificates", certificatesRouter)
-// console.log("✅ Certificate routes mounted at /api/certificates")
+app.use("/api/certificates", certificatesRouter)
+console.log("✅ Certificate routes mounted at /api/certificates")
 
 app.use("/api/gemini", geminiRoutes)
 console.log("✅ Gemini routes mounted at /api/gemini")

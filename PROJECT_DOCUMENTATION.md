@@ -11,6 +11,8 @@ CodeVerse is a full-stack competitive programming and learning platform designed
 3. Main Components
 4. Chat System
 5. Code Editor & Problem Solving
+6. Contests & Leaderboards
+7. AI Interview Practice
 8. Authentication & User Management
 9. Admin & Moderation
 10. Deployment & Configuration
@@ -21,10 +23,14 @@ CodeVerse is a full-stack competitive programming and learning platform designed
 
 ## 1. Features Overview
 - **Practice Problems:** 2000+ coding problems, detailed explanations, tags, company filters.
+- **Contests:** Weekly global contests, ELO rating, live leaderboards.
+- **Real-time Battles:** Live coding games, anti-cheat, rating system.
+- **AI Interview Practice:** AI-powered questions, voice interaction, feedback.
 - **Discussion & Collaboration:** Forums, announcements, chat.
 - **Rich Code Editor:** CodeMirror-based, completions, themes, competitive snippets.
 - **User Profiles:** Stats, coins, achievements, submissions.
 - **Admin Dashboard:** Problem management, announcements, moderation.
+
 
 ---
 
@@ -33,20 +39,20 @@ CodeVerse is a full-stack competitive programming and learning platform designed
 - **Backend:** Node.js, Express, MongoDB, REST APIs.
 - **Authentication:** JWT, OAuth (Google, GitHub), Passport.js.
 - **Code Execution:** Judge0 API integration.
-- **Real-time:** Socket.io for chat.
+- **Real-time:** Socket.io for games/chat.
+- **AI:** Gemini/LLM for interview practice.
 - **Deployment:** Vite, Render, Netlify, Docker (optional).
 
----
 
+---
 ## 3. Main Components
-- **Home Page:** Carousel, stats, explore cards, company/topic stats 
+- **Home Page:** Carousel, stats, explore cards, company/topic stats, announcements, contests.
 - **Problems Page:** Search, filter, dropdowns, problem list, attractive buttons, pagination.
 - **Problem Detail:** Description, constraints, examples, code editor, submissions, solutions, AI chat.
 - **Discussion:** Forums, threads, replies, announcements.
 - **Game/Contest:** Live battles, leaderboard, timers.
 - **Profile:** User stats, coins, achievements, history.
 - **Admin:** Problem/announcement management, moderation tools.
-
 ---
 
 ## 4. Chat System
@@ -64,24 +70,36 @@ CodeVerse is a full-stack competitive programming and learning platform designed
 - **Solutions/Editorial:** Community/user solutions, official editorial, video/written explanations.
 
 ---
+## 6. Contests & Leaderboards
+- **Contests:** Weekly, global, ELO rating, live status, timers, upcoming/active.
+- **Leaderboard:** Top users, ratings, games played, win rate.
+- **Company/Topic Stats:** Filter problems by company/topic, stats on acceptance rate, submissions, difficulty.
 
 ---
 
-## 6. Authentication & User Management
+## 7. Authentication & User Management
 - **Auth:** JWT, OAuth, protected routes, user context.
 - **Profile:** Stats, coins, achievements, submissions, history.
 - **Admin:** User management, moderation, announcements.
 
+
 ---
 
-## 7. Admin & Moderation
+## 8. AI Interview Practice
+- **AI Chat:** Contextual prompts, optimal approaches, data structures, complexity, edge cases, mistakes.
+- **Voice Interaction:** (Planned) Real-time feedback, voice-based questions.
+- **Session Management:** Save/load chat history, quick prompts, maximized/minimized views.
+
+---
+
+## 9. Admin & Moderation
 - **Dashboard:** Manage problems, announcements, users.
 - **Moderation:** Ban users, edit/delete content, review submissions.
 - **Announcements:** Create/edit, priority, type, display on home/discussion.
 
 ---
 
-## 8. Deployment & Configuration
+## 10. Deployment & Configuration
 - **Frontend:** Vite, Tailwind, Netlify/Render.
 - **Backend:** Node.js, Express, MongoDB, Render/Docker.
 - **Config Files:** `package.json`, `vite.config.ts`, `render.yaml`, `.env` (API keys, DB URI).
@@ -89,7 +107,7 @@ CodeVerse is a full-stack competitive programming and learning platform designed
 
 ---
 
-## 9. Development Guidelines
+## 11. Development Guidelines
 - **Code Style:** TypeScript, functional components, hooks, context API.
 - **UI:** Tailwind CSS, modern gradients, responsive design, accessibility.
 - **Testing:** Jest, React Testing Library (recommended).
@@ -98,7 +116,7 @@ CodeVerse is a full-stack competitive programming and learning platform designed
 
 ---
 
-## 10. Change Log & Chat Summary
+## 12. Change Log & Chat Summary
 ### Recent Changes & Chat Features
 - Added rich chat modal to Home and CodeMirror editor (send/read, maximize/minimize).
 - Made problem list rows fully clickable.
